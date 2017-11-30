@@ -3,7 +3,7 @@ class Configuration:
     spread_name = ""
 
     @staticmethod
-    def set_configuration():
+    def get_configuration():
         config_file = ("config.txt", "r")
 
         with open('config.txt') as fin:
@@ -14,8 +14,5 @@ class Configuration:
                     Configuration.dir_path = value
                 elif setting == "spread_name":
                     Configuration.spread_name = value
-
-        print(Configuration.spread_name)
-        print(Configuration.dir_path)
 
 
